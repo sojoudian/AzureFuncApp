@@ -32,3 +32,4 @@ PORT = 80
 with socketserver.TCPServer(("", PORT), HelloWorldHandler) as httpd:
     print(f"Serving at port {PORT}")
     httpd.serve_forever()
+#curl https://novtt.azurewebsites.net/api/http_trigger\?code\=Q42fH3kMHSgaQ_835Nrg1BeCGpbiS2TexSgAWtUyeNjEAzFutjd3WQ\=\=\&name\="maziar"

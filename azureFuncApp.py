@@ -12,11 +12,11 @@ class HelloWorldHandler(http.server.SimpleHTTPRequestHandler):
             response = json.dumps({
                 'message': 'Hello, World!'
             }).encode('utf-8')
-            
+
             # Send the headers
             self.send_response(200)
             self.send_header('Content-type', 'application/json')
-            self.send_header('Content-length', len(response))
+            self.send_header('Content-length', str(len(response)))
             self.end_headers()
             
             # Send the response body
